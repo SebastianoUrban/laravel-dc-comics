@@ -21,7 +21,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1> Ciao </h1>
+                    <h1> Home </h1>
+                    <a href="http://127.0.0.1:8000/comics">Pagina Comics</a>
                 </div>
             </div>
 

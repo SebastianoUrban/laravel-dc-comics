@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Comics\ComicsController as ComicsController;
+use App\Http\Controllers\HomeController as HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,5 @@ use App\Http\Controllers\Comics\ComicsController as ComicsController;
 |
 */
 
-Route::get('/', [ComicsController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/comics', [ComicsController::class, 'index']);
