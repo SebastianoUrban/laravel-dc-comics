@@ -16,4 +16,5 @@ use App\Http\Controllers\HomeController as HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/comics', [ComicsController::class, 'index']);
+Route::get('/comics', [ComicsController::class, 'index'])->name('comics.index');
+Route::get('/comics/{id}', [ComicsController::class, 'show'])->name('comics.show');

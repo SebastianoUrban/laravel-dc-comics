@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1> Comics </h1>
+                    <h1 class="mb-5"> Comics </h1>
 
                     <table class="table">
                         <thead>
@@ -34,6 +34,7 @@
                                 <th scope="col">series</th>
                                 <th scope="col">sale_date</th>
                                 <th scope="col">type</th>
+                                <th scope="col">CRUD</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,6 +48,9 @@
                                     <td>{{$comic->series}}</td>
                                     <td>{{$comic->sale_date}}</td>
                                     <td>{{$comic->type}}</td>
+                                    <td>
+                                        <a href=" {{route('comics.show', $comic->id)}} " class="btn-primary">Show</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
