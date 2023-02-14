@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="mb-5"> Home </h1>
-                    <a href="http://127.0.0.1:8000/comics">Pannello Admin</a>
+                    <a href="{{route('comics.index')}}">Pannello Admin</a>
                 </div>
             </div>
 

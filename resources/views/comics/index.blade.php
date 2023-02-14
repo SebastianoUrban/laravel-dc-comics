@@ -22,6 +22,12 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="mb-5"> Comics </h1>
+                </div>
+                <div class="col-12 mb-3 d-flex justify-content-between">
+                    <a href=" {{route('home')}} " class="btn-primary">Back</a>
+                    <a href=" {{route('comics.create')}} " class="btn-primary">Create</a>
+                </div>
+                <div class="col-12">
 
                     <table class="table">
                         <thead>
