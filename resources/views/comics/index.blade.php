@@ -57,7 +57,13 @@
                                     <td>
                                         <a href=" {{route('comics.show', $comic->id)}} " class="btn btn-primary">Show</a>
                                         <a href=" {{route('comics.edit', $comic->id)}} " class="btn btn-warning">Edit</a>
-                                        <a href="" class="btn btn-danger">Delete</a>
+                                        <form action="{{ route('comics.destroy', $comic)}}" method="post" class="d-inline-block">
+                                            @csrf
+                                            @method('DELETE')
+
+                                            <input type="submit" value="Cancella" class="btn btn-danger">
+                                        </form>
+                                        
                                     </td>
                                 </tr>
                             @endforeach
