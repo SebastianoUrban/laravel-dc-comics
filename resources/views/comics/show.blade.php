@@ -36,7 +36,7 @@
                             <h5>Description:</h5>
                             <p>{{$comic->description}}</p>
                             <h5>Price: </h5>
-                            <p>{{$comic->description}}</p>
+                            <p>{{$comic->price}}</p>
                             <h5>Series: </h5>
                             <p>{{$comic->series}}</p>
                             <h5>Sale Date: </h5>

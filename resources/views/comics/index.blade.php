@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-12 mb-3 d-flex justify-content-between">
                     <a href=" {{route('home')}} " class="btn-primary">Back</a>
-                    <a href=" {{route('comics.create')}} " class="btn-primary">Create</a>
+                    <a href=" {{route('comics.create')}} " class="btn btn-info">Create</a>
                 </div>
                 <div class="col-12">
 
@@ -55,7 +55,9 @@
                                     <td>{{$comic->sale_date}}</td>
                                     <td>{{$comic->type}}</td>
                                     <td>
-                                        <a href=" {{route('comics.show', $comic->id)}} " class="btn-primary">Show</a>
+                                        <a href=" {{route('comics.show', $comic->id)}} " class="btn btn-primary">Show</a>
+                                        <a href=" {{route('comics.edit', $comic->id)}} " class="btn btn-warning">Edit</a>
+                                        <a href="" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
