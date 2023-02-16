@@ -23,6 +23,15 @@
                 <div class="col-12">
                     <h1 class="mb-3"> Create Comic </h1>
                 </div>
+                <div class="col-12">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>
+                                {{$error}}
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
                 <div class="col-12 mb-5">
                     <a href=" {{route('comics.index')}} " class="btn-primary">Back</a>
                 </div>
@@ -32,31 +41,31 @@
                         <div class="row g-4">
                             <div class="col-4">
                                 <label for="title">Title</label>
-                                <input type="text" name="title" id="title">
+                                <input type="text" name="title" id="title" value="{{old('title')}}">
                             </div>
                             <div class="col-4">
                                 <label for="description">Description</label>
-                                <input type="text" name="description" id="description">
+                                <input type="text" name="description" id="description" value="{{old('description')}}">
                             </div>
                             <div class="col-4">
                                 <label for="thumb">Thumb</label>
-                                <input type="text" name="thumb" id="thumb">
+                                <input type="text" name="thumb" id="thumb" value="{{old('thumb')}}">
                             </div>
                             <div class="col-3">
                                 <label for="price">price</label>
-                                <input type="number" step="0.01" name="price" id="price">
+                                <input type="number" step="0.01" name="price" id="price" value="{{old('price')}}">
                             </div>
                             <div class="col-3">
                                 <label for="series">Series</label>
-                                <input type="text" name="series" id="series">
+                                <input type="text" name="series" id="series" value="{{old('series')}}">
                             </div>
                             <div class="col-3">
                                 <label for="sale_date">aale date</label>
-                                <input type="date" name="sale_date" id="sale_date">
+                                <input type="date" name="sale_date" id="sale_date" value="{{old('sale_date')}}">
                             </div>
                             <div class="col-3">
                                 <label for="type">Type</label>
-                                <input type="text" name="type" id="type">
+                                <input type="text" name="type" id="type" value="{{old('type')}}">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <button type="submit">Invia</button>

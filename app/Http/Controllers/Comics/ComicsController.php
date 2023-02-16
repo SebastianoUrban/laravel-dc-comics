@@ -25,6 +25,33 @@ class ComicsController extends Controller
     
     public function store(Request $request) {
         $data = $request->all();
+
+        $request->validate([
+            'title' => 'required|string|min:2|max:100',
+            'description' => 'nullable',
+            'thumb' => 'required|url|min:5',
+            'price' => 'required|numeric|max_digits:2',
+            'series' => 'required|string|max:20',
+            'sale_date' => 'required',
+            'type' => 'required|string|max:20'
+        ],
+        [
+            'title.required' => 'Il campo TITOLO è obbligatorio!',
+            'title.string' => 'Il campo TITOLO deve essere una STRINGA!',
+            'title.min' => 'Il campo TITOLO deve essere lungo ALMENO 2 CARATTERI!',
+            'title.max' => 'Il campo TITOLO deve essere lungo AL MASSINO 100 CARATTERI!',
+            'thumb.required' => 'Il campo THUMB è obbligatorio!',
+            'thumb.min' => 'Il campo THUMB deve essere lungo ALMENO 5 CARATTERI!',
+            'price.required' => 'Il campo PRICE è obbligatorio!',
+            'price.max_digits' => 'Il campo PRICE deve avere AL MASSINO 2 DIGITS!',
+            'series.required' => 'Il campo SERIES è obbligatorio!',
+            'series.string' => 'Il campo SERIES deve essere una STRINGA!',
+            'series.max' => 'Il campo SERIES deve essere lungo AL MASSINO 20 CARATTERI!',
+            'sale_date.required' => 'Il campo SALE DATE è obbligatorio!',
+            'type.required' => 'Il campo TYPE è obbligatorio!',
+            'type.string' => 'Il campo TYPE deve essere una STRINGA!',
+            'type.max' => 'Il campo TYPE deve essere lungo AL MASSINO 20 CARATTERI!'
+        ]);
         
         $newComic = new Comic();
         $newComic->title = $data['title'];
